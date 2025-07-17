@@ -1,30 +1,64 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <meta charset="UTF-8">
-  <title>Slovenské meniny</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📅 Slovenský kalendár menín</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+      line-height: 1.6;
+      color: #111;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+    }
+    .links a {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    small {
+      display: block;
+      margin-top: 2rem;
+      color: #888;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 2rem;">
+<body>
   <h1>📅 Slovenský kalendár menín</h1>
-  <p>Tento kalendár obsahuje slovenské meniny s emoji 🎉 pre každý deň.</p>
+  <p>
+    Tento kalendár obsahuje slovenské meniny pre <strong>každý deň v roku 2025</strong> s emoji 👩‍🦰👨‍🦱 podľa pohlavia.
+    Funguje na <strong>Mac</strong> aj <strong>iPhone</strong>.
+  </p>
 
   <h2>🛠 Ako pridať do Kalendára</h2>
   <ol>
-    <li>Otvorte Kalendár na Mac alebo iPhone</li>
-    <li>Zvoľte <strong>Súbor > Nový odber kalendára</strong></li>
-    <li>Vložte túto adresu:</li>
-    <pre>https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics</pre>
+    <li>Otvorte Kalendár na Macu alebo iPhone</li>
+    <li>Zvoľte <strong>Súbor &gt; Nový odber kalendára</strong></li>
+    <li>Vložte túto adresu:<br />
+      <code>https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics</code>
+    </li>
     <li>Potvrďte a hotovo!</li>
   </ol>
 
   <h2>🔗 Priame odkazy</h2>
-  <ul>
-    <li><a href="meniny.ics" download>⬇️ Stiahnuť meniny.ics</a></li>
-    <li><a href="webcal://peterfromslovakia.github.io/meniny-kalendar/meniny.ics">🌀 Pridať do Kalendára (webcal)</a></li>
-  </ul>
+  <div class="links">
+    <a href="meniny.ics">⬇️ Stiahnuť meniny.ics</a><br>
+    <a href="webcal://peterfromslovakia.github.io/meniny-kalendar/meniny.ics">🌐 Pridať do Kalendára (webcal)</a>
+  </div>
 
-  <footer style="margin-top: 2rem; font-size: 0.9em;">
-    Vytvoril s ❤️ Peter Obala • <a href="https://github.com/peterfromslovakia">GitHub profil</a>
-  </footer>
+  <hr>
+
+  <p><em>This calendar is intended for Slovak users – it contains all name days for 2025, with emoji based on gender, designed to work with Apple Calendar on macOS and iOS.</em></p>
+
+  <small>Vytvoril s ❤️ Peter Obala • <a href="https://github.com/peterfromslovakia">GitHub profil</a></small>
 </body>
 </html>
