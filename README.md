@@ -1,19 +1,25 @@
-# 📅 Slovenský kalendár menín
+## 📅 Slovenský kalendár menín / Slovak Namedays Calendar
 
-Tento repozitár obsahuje `.ics` súbor s meninami na Slovensku. Možno ho pripojiť priamo do macOS alebo iOS kalendára.
+Tento repozitár obsahuje `.ics` súbor s meninami na Slovensku. Môžeš si ho pripojiť do aplikácie **Kalendár** na **macOS** alebo **iPhone**.
 
-## 🔗 Pridanie do Kalendára (macOS / iPhone)
-1. Otvor Kalendár
-2. Súbor > Nový odber kalendára
-3. Vlož adresu:
-```
-https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics
-```
-4. Potvrď a nastav aktualizáciu (napr. denne)
+This repository contains an `.ics` calendar file with Slovak namedays. You can subscribe to it using the **Calendar app** on **macOS** or **iPhone**.
 
-## ℹ️ Popis
-- Obsahuje meniny s emoji
-- Notifikácia 1 hodinu pred
-- Funguje aj ako „webcal“ linka
+---
 
-Vytvoril s ❤️ [Peter Obala](https://github.com/peterfromslovakia)
+### 🔗 Pridanie do Kalendára (macOS alebo iPhone)
+#### macOS / iOS Instructions:
+1. Otvor aplikáciu **Kalendár**  
+2. Zvoľ **Súbor > Nový odber kalendára...**  
+3. Zadaj túto adresu:
+
+4. Potvrď a nastav si aktualizáciu (napr. denne)
+
+---
+
+### 📁 Priame odkazy / Direct Links:
+- [Stiahnuť meniny.ics](https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics)  
+- [Pridať do Kalendára (webcal)](webcal://peterfromslovakia.github.io/meniny-kalendar/meniny.ics)
+
+---
+
+**Vytvoril Peter Obala • [GitHub profil](https://github.com/peterfromslovakia)**
