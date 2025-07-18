@@ -35,33 +35,6 @@
       margin-top: 2rem;
       color: #888;
     }
-    iframe {
-      border: 1px solid #ccc;
-      width: 100%;
-      height: 700px;
-      border-radius: 8px;
-    }
-    .feedback-form {
-      margin-top: 2rem;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-family: inherit;
-    }
-    button {
-      background-color: #0a84ff;
-      color: white;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -99,23 +72,6 @@
   <div class="links">
     <a href="meniny.ics">⬇️ Stiahnuť meniny.ics</a><br>
     <a href="webcal://peterfromslovakia.github.io/meniny-kalendar/meniny.ics">📅 Pridať do Apple Kalendára (webcal)</a>
-  </div>
-
-  <h2>Kalendár na webe</h2>
-  <p>Tu si môžeš pozrieť prehľad menín bez potreby importovania:</p>
-  <iframe src="https://peterfromslovakia.github.io/meniny-kalendar/prehliadac.html" title="Kalendár menín"></iframe>
-
-  <div class="feedback-form">
-    <h2>Pripomienky alebo návrhy</h2>
-    <form action="https://formspree.io/f/xknlkzje" method="POST">
-      <label for="name">Tvoje meno (nepovinné)</label>
-      <input type="text" id="name" name="name">
-
-      <label for="message">Tvoja správa alebo pripomienka:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Odoslať</button>
-    </form>
   </div>
 
   <small>Kalendár je určený pre slovenských používateľov – obsahuje všetky meniny pre rok 2025.<br>
