@@ -1,4 +1,4 @@
-# 📅 Slovenský kalendár menín / Slovak Namedays Calendar
+#  Slovenský kalendár menín / Slovak Namedays Calendar
 
 Tento repozitár obsahuje `.ics` súbor so slovenskými meninami pre rok **2025**, ktorý si môžeš jednoducho pridať do svojho Kalendára (Apple aj Google), alebo si **prehliadnuť meniny online** bez potreby importu.
 
@@ -6,13 +6,13 @@ Tento repozitár obsahuje `.ics` súbor so slovenskými meninami pre rok **2025*
 
 ## 🧭 Rýchle odkazy
 
-- 📥 [Stiahnuť meniny.ics](https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics)  
-- 📅 [Pridať do Apple Kalendára (webcal)](webcal://peterfromslovakia.github.io/meniny-kalendar/meniny.ics)  
-- 🔎 [Zobraziť meniny na webe – prehliadač](https://peterfromslovakia.github.io/meniny-kalendar/prehliadac.html)
+-  [Stiahnuť meniny.ics](https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics)  
+-  [Pridať do Apple Kalendára (webcal)](webcal://peterfromslovakia.github.io/meniny-kalendar/meniny.ics)  
+-  [Zobraziť meniny na webe – prehliadač](https://peterfromslovakia.github.io/meniny-kalendar/prehliadac.html)
 
 ---
 
-## 🖥️ Ako pridať do Kalendára (macOS / iPhone)
+##  Ako pridať do Kalendára (macOS / iPhone)
 
 1. Otvor aplikáciu Kalendár  
 2. Zvoľ **Súbor > Nový odber kalendára...**  
@@ -22,7 +22,7 @@ Tento repozitár obsahuje `.ics` súbor so slovenskými meninami pre rok **2025*
 
 ---
 
-## 📆 Ako pridať do Google Kalendára (Android / Web)
+##  Ako pridať do Google Kalendára (Android / Web)
 
 1. Otvor [Google Kalendár](https://calendar.google.com)  
 2. Vľavo klikni na **+ Pridať kalendár > Z URL**  
@@ -32,10 +32,10 @@ Tento repozitár obsahuje `.ics` súbor so slovenskými meninami pre rok **2025*
 
 ---
 
-## 🔍 Prehliadač menín
+##  Prehliadač menín
 
 Ak nechceš nič inštalovať, pozri si meniny online cez túto stránku:  
-👉 [Prehliadač menín – celý rok 2025](https://peterfromslovakia.github.io/meniny-kalendar/prehliadac.html)
+[Prehliadač menín – celý rok 2025](https://peterfromslovakia.github.io/meniny-kalendar/prehliadac.html)
 
 Kliknutím na meno si môžeš **stiahnuť pripomienku** pre konkrétny deň vo formáte `.ics`  
 (funguje na Apple aj Android zariadeniach).
