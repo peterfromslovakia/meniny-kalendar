@@ -1,48 +1,45 @@
-# Slovenský kalendár menín / Slovak Namedays Calendar
+# 📅 Slovenský meninový kalendár
 
-Tento repozitár obsahuje `.ics` súbor so slovenskými meninami pre rok 2025. Kalendár si môžeš pridať do Kalendára na Macu alebo iPhone a automaticky sa ti bude synchronizovať.
+Tento repozitár obsahuje `.ics` súbor s meninami na Slovensku pre celý rok **2025**. Môžete si ho jednoducho pridať do:
 
----
-
-## Ako pridať do Kalendára (macOS / iPhone)
-
-1. Otvor aplikáciu Kalendár  
-2. Zvoľ Súbor > Nový odber kalendára...  
-3. Vlož túto adresu:
-
-   https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics
-
-4. Potvrď a nastav si automatickú aktualizáciu (napr. denne)
+- 📱 iPhone / iPad (cez iOS Kalendár)
+- 💻 macOS Kalendár
+- 📆 Google Kalendár
+- 🧠 alebo si nastaviť pripomienky manuálne priamo zo stránky
 
 ---
 
-## Priame odkazy
+## 🔗 Odkazy
 
-- [Stiahnuť meniny.ics](https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics)  
-- [Pridať do Kalendára (webcal)](webcal://peterfromslovakia.github.io/meniny-kalendar/meniny.ics)  
-- [Zobraziť celý prehľad menín online](https://peterfromslovakia.github.io/meniny-kalendar/prehliadac.html)
-
----
-
-## English
-
-This repository contains a `.ics` calendar file with Slovak namedays for 2025. You can subscribe to it in Apple Calendar on macOS or iOS.
-
-### macOS / iOS Instructions
-
-1. Open the Calendar app  
-2. Select File > New Calendar Subscription...  
-3. Paste this URL:
-
-   https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics
-
-4. Confirm and set auto-refresh (e.g., daily)
+- 🌐 Web verzia: [https://peterfromslovakia.github.io/meniny-kalendar/](https://peterfromslovakia.github.io/meniny-kalendar/)
+- 🗂 Prehliadač mien + exportovanie konkrétneho mena: [prehliadac.html](https://peterfromslovakia.github.io/meniny-kalendar/prehliadac.html)
+- 📥 ICS súbor: [meniny.ics](https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics)
 
 ---
 
-This calendar is intended for Slovak users. Designed to work with Apple Calendar on macOS and iOS.
+## 📸 Ukážky kalendára
+
+### iPhone (iOS Kalendár)
+Zobrazenie menín v aplikácii Kalendár na iPhone:
+
+![iOS](iOS-iPhone-kalendar.PNG)
 
 ---
 
-Created by Peter Obala  
-[GitHub profile](https://github.com/peterfromslovakia)
+### macOS Kalendár
+Zobrazenie slovenských mien v macOS Kalendári:
+
+![macOS](MacOS-kalendar.png)
+
+---
+
+## ℹ️ Ako pridať kalendár do iPhone alebo Macu
+
+1. Otvorte `.ics` súbor v Safari
+2. Vyberte „Otvoriť v Kalendári“
+3. Pridajte do existujúceho alebo nového kalendára (napr. **Slovenské meniny**)
+4. Hotovo – meniny sa zobrazia vo vašom kalendári
+
+---
+
+Vytvoril s ❤️ [Peter Obala](https://github.com/peterfromslovakia)
