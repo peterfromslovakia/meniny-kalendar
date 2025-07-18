@@ -36,11 +36,31 @@
       color: #888;
     }
     iframe {
-      margin-top: 2rem;
+      border: 1px solid #ccc;
       width: 100%;
       height: 700px;
+      border-radius: 8px;
+    }
+    .feedback-form {
+      margin-top: 2rem;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
       border: 1px solid #ccc;
-      border-radius: 6px;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    button {
+      background-color: #0a84ff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -48,7 +68,7 @@
   <h1>Slovenský kalendár menín</h1>
   <p>
     Tento kalendár obsahuje slovenské meniny pre <strong>každý deň v roku 2025</strong>.<br>
-    Funguje na <strong>Mac</strong>, <strong>iPhone</strong> aj <strong>Google Kalendári</strong>.
+    Funguje na <strong>Mac</strong>, <strong>iPhone</strong> a <strong>Google Kalendári</strong> (po pridaní cez URL).
   </p>
 
   <div class="updated">
@@ -66,13 +86,14 @@
   </ol>
 
   <h2>Google Kalendár</h2>
-  <p>
-    1. Otvor <a href="https://calendar.google.com" target="_blank">Google Kalendár</a><br>
-    2. Vľavo klikni na <strong>„Iné kalendáre“ &gt; „+“ &gt; Z adresy URL</strong><br>
-    3. Vlož adresu:<br>
-    <code>https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics</code><br>
-    4. Potvrď a hotovo.
-  </p>
+  <ol>
+    <li>Otvorte <a href="https://calendar.google.com" target="_blank">Google Kalendár</a></li>
+    <li>Vľavo kliknite na „<strong>+</strong>“ z adresy URL</li>
+    <li>Vložte adresu:<br />
+      <code>https://peterfromslovakia.github.io/meniny-kalendar/meniny.ics</code>
+    </li>
+    <li>Potvrďte a hotovo!</li>
+  </ol>
 
   <h2>Priame odkazy</h2>
   <div class="links">
@@ -81,12 +102,24 @@
   </div>
 
   <h2>Kalendár na webe</h2>
-  <iframe src="https://calendar.google.com/calendar/embed?src=peterfromslovakia.github.io%2Fmeniny-kalendar%2Fmeniny.ics&ctz=Europe%2FBratislava"></iframe>
+  <p>Tu si môžeš pozrieť prehľad menín bez potreby importovania:</p>
+  <iframe src="https://peterfromslovakia.github.io/meniny-kalendar/prehliadac.html" title="Kalendár menín"></iframe>
 
-  <hr>
+  <div class="feedback-form">
+    <h2>Pripomienky alebo návrhy</h2>
+    <form action="https://formspree.io/f/xknlkzje" method="POST">
+      <label for="name">Tvoje meno (nepovinné)</label>
+      <input type="text" id="name" name="name">
 
-  <p><em>Kalendár je určený pre slovenských používateľov – obsahuje všetky meniny pre rok 2025. Funguje v Apple Kalendári aj Google Kalendári.</em></p>
+      <label for="message">Tvoja správa alebo pripomienka:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-  <small>Vytvoril Peter Obala • <a href="https://github.com/peterfromslovakia">GitHub profil</a></small>
+      <button type="submit">Odoslať</button>
+    </form>
+  </div>
+
+  <small>Kalendár je určený pre slovenských používateľov – obsahuje všetky meniny pre rok 2025.<br>
+  Funguje v Apple Kalendári aj Google Kalendári.<br>
+  Vytvoril Peter Obala • <a href="https://github.com/peterfromslovakia">GitHub profil</a></small>
 </body>
 </html>
