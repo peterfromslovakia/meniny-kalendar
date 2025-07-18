@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prehliadač slovenských menín 2025</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      line-height: 1.6;
+      color: #111;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .mesiac {
+      margin-bottom: 2rem;
+    }
+    ul {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      padding-left: 1rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
+      cursor: pointer;
+      color: #0a84ff;
+    }
+    li:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>📅 Prehliadač slovenských menín – 2025</h1>
+  <p style="text-align:center;">Klikni na meno a vytvor si pripomienku 🎉</p>
+  <div id="kalendar"></div>
+
+  <script>
+    const meniny = {
+      "január": ["1. Nový rok", "2. Alexandra", "3. Daniela", "4. Drahoslav", "5. Andrea", "6. Antónia", "7. Bohuslava", "8. Severín", "9. Alexej", "10. Dáša", "11. Malvína", "12. Ernest", "13. Rastislav", "14. Radovan", "15. Dobroslav", "16. Kristína", "17. Nataša", "18. Bohdana", "19. Mário", "20. Dalibor", "21. Vincent", "22. Zora", "23. Miloš", "24. Timotej", "25. Gejza", "26. Tamara", "27. Bohuš", "28. Alfonz", "29. Gašpar", "30. Ema", "31. Emil"],
+      "február": ["1. Tatiana", "2. Erika", "3. Blažej", "4. Veronika", "5. Agáta", "6. Dorota", "7. Vanda", "8. Zoja", "9. Zdenko", "10. Gabriela", "11. Dezdava", "12. Perla", "13. Arpád", "14. Valentín", "15. Pravoslav", "16. Ida", "17. Miloslava", "18. Jaromír", "19. Vlasta", "20. Lívia", "21. Eleonóra", "22. Etela", "23. Roman", "24. Matej", "25. Frederik", "26. Viktor", "27. Alexander", "28. Zlatica"],
+      "marec": ["1. Albín", "2. Anežka", "3. Bohumil", "4. Kazimír", "5. Fridrich", "6. Radoslav", "7. Tomáš", "8. Alan", "9. Františka", "10. Bruno", "11. Angela", "12. Gregor", "13. Vlastimil", "14. Matilda", "15. Svetlana", "16. Benjamín", "17. Ľubica", "18. Eduard", "19. Jozef", "20. Víťazoslav", "21. Blahoslav", "22. Beňadik", "23. Adrián", "24. Gabriel", "25. Marián", "26. Emanuel", "27. Alena", "28. Soňa", "29. Miroslav", "30. Vieroslava", "31. Balbína"],
+      "apríl": ["1. Hugo", "2. Zita", "3. Richard", "4. Izidor", "5. Miroslava", "6. Irena", "7. Zoltán", "8. Albert", "9. Milena", "10. Igor", "11. Július", "12. Estera", "13. Aleš", "14. Justína", "15. Fedor", "16. Dana", "17. Rudolf", "18. Valér", "19. Jela", "20. Marcel", "21. Ervín", "22. Slavomír", "23. Vojtech", "24. Juraj", "25. Marek", "26. Jaroslava", "27. Jaroslav", "28. Jarmila", "29. Lea", "30. Anastázia"],
+      "máj": ["1. Sviatok práce", "2. Žigmund", "3. Galina", "4. Florián", "5. Lesana", "6. Hermína", "7. Monika", "8. Ingrida", "9. Roland", "10. Viktória", "11. Blažena", "12. Pankrác", "13. Servác", "14. Bonifác", "15. Žofia", "16. Svetozár", "17. Gizela", "18. Viola", "19. Gertrúda", "20. Bernard", "21. Zina", "22. Júlia", "23. Želmíra", "24. Ela", "25. Urban", "26. Dušan", "27. Iveta", "28. Viliam", "29. Vilma", "30. Ferdinand", "31. Petronela"],
+      "jún": ["1. Žaneta", "2. Xénia", "3. Karolína", "4. Lenka", "5. Laura", "6. Norbert", "7. Róbert", "8. Medard", "9. Stanislava", "10. Margaréta", "11. Dobroslava", "12. Zlatko", "13. Anton", "14. Vasil", "15. Vít", "16. Blanka", "17. Adolf", "18. Vratislav", "19. Alfréd", "20. Valéria", "21. Alojz", "22. Paulína", "23. Sidónia", "24. Ján", "25. Tadeáš", "26. Adriana", "27. Ladislav", "28. Beáta", "29. Peter a Pavol", "30. Melánia"],
+      "júl": ["1. Diana", "2. Berta", "3. Miloslav", "4. Prokop", "5. Cyril a Metod", "6. Patrícia", "7. Oliver", "8. Ivan", "9. Lujza", "10. Amália", "11. Milota", "12. Nina", "13. Margita", "14. Kamil", "15. Henrich", "16. Drahomír", "17. Bohuslav", "18. Kamila", "19. Dušana", "20. Iľja", "21. Daniel", "22. Magdaléna", "23. Oľga", "24. Vladimír", "25. Jakub", "26. Anna", "27. Božena", "28. Krištof", "29. Marta", "30. Libuša", "31. Ignác"],
+      "august": ["1. Božidara", "2. Gustáv", "3. Jerguš", "4. Dominik", "5. Hortenzia", "6. Jozefína", "7. Štefánia", "8. Oskar", "9. Ľubomíra", "10. Vavrinec", "11. Zuzana", "12. Darina", "13. Ľubomír", "14. Mojmír", "15. Marcela", "16. Leonard", "17. Milica", "18. Elena", "19. Lýdia", "20. Anabela", "21. Jana", "22. Tichomír", "23. Filip", "24. Bartolomej", "25. Ľudovít", "26. Samuel", "27. Silvia", "28. Augustín", "29. Nikola", "30. Ružena", "31. Nora"],
+      "september": ["1. Drahoslava", "2. Linda", "3. Belo", "4. Rozália", "5. Regína", "6. Alica", "7. Marianna", "8. Miriama", "9. Martina", "10. Oleg", "11. Bystrík", "12. Mária", "13. Ctibor", "14. Ľudomil", "15. Jolana", "16. Ľudmila", "17. Olympia", "18. Eugénia", "19. Konštantín", "20. Ľuboslav", "21. Matúš", "22. Móric", "23. Zdenka", "24. Ľuboš", "25. Vladislav", "26. Edita", "27. Cyprián", "28. Václav", "29. Michal", "30. Jarolím"],
+      "október": ["1. Arnold", "2. Levoslav", "3. Stela", "4. František", "5. Viera", "6. Natália", "7. Eliška", "8. Brigita", "9. Dionýz", "10. Slavomíra", "11. Valentina", "12. Maximilián", "13. Koloman", "14. Boris", "15. Terézia", "16. Vladimíra", "17. Hedviga", "18. Lukáš", "19. Kristián", "20. Vendelín", "21. Uršuľa", "22. Sergej", "23. Alojzia", "24. Kvetoslava", "25. Aurel", "26. Demeter", "27. Sabína", "28. Dobromila", "29. Klára", "30. Šimon", "31. Aurélia"],
+      "november": ["1. Den mrtvych", "2. Pamätný deň", "3. Hubert", "4. Karol", "5. Imrich", "6. Renáta", "7. René", "8. Bohumír", "9. Teodor", "10. Tibor", "11. Martin", "12. Svätopluk", "13. Stanislav", "14. Irma", "15. Leopold", "16. Agnesa", "17. Klaudia", "18. Eugen", "19. Alžbeta", "20. Félix", "21. Elvíra", "22. Cecília", "23. Klement", "24. Emília", "25. Katarína", "26. Kornel", "27. Milan", "28. Henrieta", "29. Vratko", "30. Ondrej"],
+      "december": ["1. Edmund", "2. Bibiána", "3. Oldrich", "4. Barbora", "5. Oto", "6. Mikuláš", "7. Ambróz", "8. Mariana", "9. Izabela", "10. Radúz", "11. Hilda", "12. Otília", "13. Lucia", "14. Branislava", "15. Ivica", "16. Albína", "17. Kornélia", "18. Slávka", "19. Judita", "20. Dagmara", "21. Bohdan", "22. Adela", "23. Nadežda", "24. Adam a Eva", "25. Prvý sviatok", "26. Štefan", "27. Filoména", "28. Ivana", "29. Milada", "30. Dávid", "31. Silvester"]
+    };
+
+    function createICS(dateStr, meno) {
+      const [den, mesiacStr] = dateStr.split(".");
+      const mesiac = mesiacStr.padStart(2, '0');
+      const denStr = den.padStart(2, '0');
+      const dtstart = `2025${mesiac}${denStr}T090000Z`;
+      const dtend = `2025${mesiac}${denStr}T091000Z`;
+
+      const icsContent = `
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Meniny má ${meno}
+DTSTART:${dtstart}
+DTEND:${dtend}
+DESCRIPTION:Pripomienka menín pre ${meno}
+END:VEVENT
+END:VCALENDAR`.trim();
+
+      const blob = new Blob([icsContent], { type: "text/calendar" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `meniny-${meno}.ics`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    const root = document.getElementById("kalendar");
+    Object.entries(meniny).forEach(([mesiac, dni], idx) => {
+      const div = document.createElement("div");
+      div.className = "mesiac";
+      const items = dni.map(den => {
+        const [cislo, ...menoArr] = den.split(". ");
+        const meno = menoArr.join(" ");
+        return `<li onclick="createICS('${cislo}.${idx + 1}', '${meno}')">${den}</li>`;
+      }).join("");
+      div.innerHTML = `<h2>${mesiac}</h2><ul>${items}</ul>`;
+      root.appendChild(div);
+    });
+  </script>
+</body>
+</html>
